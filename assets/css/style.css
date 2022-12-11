@@ -78,6 +78,7 @@ li {
 }
 
 .result{
+    display: none;
     height: 100px;
     text-align: center;
     font-size: 75px;
@@ -111,8 +112,8 @@ li {
     justify-content: center;
 }
 
-.quiz-intro, main {
-    display: none;
+.quiz-intro {
+    
     margin-bottom: 50vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -128,8 +129,8 @@ li {
     margin: 0 auto;
 }
 
-main {
-    display: block;
+#quizContainer {
+    display: none;
 }
 
 .question-screen {
@@ -141,7 +142,7 @@ main {
 }
 
 .highscore-screen {
-    display: block;
+    display: none;
 }
 
 .highscore-screen ol {   
