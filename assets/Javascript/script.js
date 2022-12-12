@@ -21,7 +21,7 @@ function start (){
     interval = setInterval(updateTime, 1000);
     container.style.display="block";
     document.querySelector(".quiz-intro").style.display = "none";
-    document.querySelector(".result").style.display = "block";
+    document.querySelector(".result").style.display = "none";
     nextButton.textContent = 'Next Question';
     loadQuestion(0);
 }
@@ -34,6 +34,8 @@ function updateTime(){
 
     }
 }
+
+
 
 function loadQuestion (questionIndex) {
     var q = questions[questionIndex];
@@ -97,4 +99,15 @@ function clearscores (){
     console.log("clearscores");
     localStorage.setItem("scores", "");
     document.getElementById("scoreboard").innerHTML="";
+}
+
+function viewhigh () {
+    document.querySelector(".highscore-screen").style.display="block";
+    document.querySelector(".quiz-intro").style.display="none";
+    document.querySelector(".quiz-finish-screen").style.display="none";
+    document.querySelector(".result").style.display = "none";
+    document.querySelector("#quizContainer").style.display = "none";
+    clearInterval(interval);
+    time = 0;
+    document.getElementById("timer").innerHTML="Timer: " + time;
 }
